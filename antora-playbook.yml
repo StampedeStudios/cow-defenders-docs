@@ -1,5 +1,6 @@
 site:
   title: Cow-Defenders
+  url: https://stampedestudios.github.io/cow-defenders-docs/
 content:
   sources:
   - url: https://github.com/StampedeStudios/cow-defenders-docs-content.git

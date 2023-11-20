@@ -2,7 +2,7 @@ site:
   title: Cow-Defenders
 content:
   sources:
-  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-docs-content.git
+  - url: https://github.com/StampedeStudios/cow-defenders-docs-content.git
     branches: HEAD
 ui:
   bundle:

@@ -9,12 +9,10 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: write
-
   pages: write
   id-token: write
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -33,17 +31,9 @@ jobs:
 
       - name: Generate Site
         run: npx antora antora-playbook.yml
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
       
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: build/site
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/site

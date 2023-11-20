@@ -31,7 +31,7 @@ jobs:
         run: npm i antora
 
       - name: Generate Site
-        run: npx antora antora-playbook.yml
+        run: npx antora docs-site/antora-playbook.yml
 
       - name: Setup Pages
         uses: actions/configure-pages@v3

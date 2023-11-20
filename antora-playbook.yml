@@ -4,7 +4,8 @@ site:
 content:
   sources:
   - url: https://github.com/StampedeStudios/cow-defenders-docs-content.git
-    branches: HEAD
+    branches: master
+    start_path: .
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable

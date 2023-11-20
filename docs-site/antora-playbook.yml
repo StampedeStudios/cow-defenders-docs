@@ -1,13 +1,9 @@
 site:
   title: Cow Defenders Docs
-  start_page: component-b::index.adoc
+  start_page: Homepage::Cow-Defenders.adoc
 content:
   sources:
-  - url: https://gitlab.com/antora/demo/demo-component-a.git
-    branches: HEAD
-  - url: https://gitlab.com/antora/demo/demo-component-b.git
-    branches: [v2.0, v1.0]
-    start_path: docs
+  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-docs-content.git
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable

@@ -25,3 +25,4 @@ _output
 
 .svelte-kit
 /build
+build/

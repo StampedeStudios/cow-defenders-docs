@@ -1,0 +1,31 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Replace ANTORA_TOKEN in antora-playbook.yml
+        run: sed -i "s/ANTORA_TOKEN/${{ secrets.GITHUB_TOKEN }}/g" antora-playbook.yml
+
+      - name: Build Site
+        run: |
+          npm i -g @antora/cli@2.3.4
+          antora --fetch antora-playbook.yml
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: build/site

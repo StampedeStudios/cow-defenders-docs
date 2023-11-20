@@ -3,29 +3,43 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: '18'
 
       - name: Replace ANTORA_TOKEN in antora-playbook.yml
         run: sed -i "s/ANTORA_TOKEN/${{ secrets.GITHUB_TOKEN }}/g" docs-site/antora-playbook.yml
 
-      - name: Build Site
-        run: |
-          npm i -g @antora/cli@2.3.4
-          antora --fetch antora-playbook.yml
+      - name: Install Antora
+        run: npm i antora
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+      - name: Generate Site
+        run: npx antora antora-playbook.yml
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          branch: gh-pages
-          folder: build/site
+          path: build/site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2

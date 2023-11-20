@@ -1,6 +1,5 @@
 site:
   title: Cow Defenders Docs
-  start_page: Cow-Defenders::index.adoc
 content:
   sources:
   - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-docs-content.git

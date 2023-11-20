@@ -1,42 +1,43 @@
-name: Publish to GitHub Pages
+name: Build and Deploy
 on:
   push:
-    branches: [master]
-  # Allows you to run this workflow manually from the Actions tab
+    branches:
+      - master
   workflow_dispatch:
 concurrency:
-  group: github-pages
-  cancel-in-progress: false
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+  group: pages
+  cancel-in-progress: true
+
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-    - name: Configure Pages
-      uses: actions/configure-pages@v3
-    - name: Install Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '18'
-    - name: Install Antora
-      run: npm i antora
-    - name: Replace Token in antora-playbook.yml
-      run: sed -i "s/ANTORA_TOKEN/${{ secrets.ANTORA_TOKEN }}/g" antora-playbook.yml
-    - name: Generate Site
-      run: npx antora antora-playbook.yml
-    - name: Upload Artifacts
-      uses: actions/upload-pages-artifact@v2
-      with:
-        path: build/site
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Replace ANTORA_TOKEN in antora-playbook.yml
+        run: sed -i "s/ANTORA_TOKEN/${{ secrets.ANTORA_TOKEN }}/g" antora-playbook.yml
+
+      - name: Install Antora
+        run: npm i antora
+      
+      - name: Install Antora Site Generator
+        run: npm i @antora/site-generator-default
+
+      - name: Generate Site
+        run: npx antora antora-playbook.yml
+        
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build/site

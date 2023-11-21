@@ -1,6 +1,6 @@
 site:
   title: Cow-Defenders
-  url: https://stampedestudios.github.io/cow-defenders-docs/cow-defenders/main/
+  url: https://stampedestudios.github.io/cow-defenders-docs/
 content:
   sources:
   - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-docs-content.git

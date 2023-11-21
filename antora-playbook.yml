@@ -7,5 +7,5 @@ content:
     branches: main
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://github.com/StampedeStudios/stampede-documentation-ui/releases/download/1.0.0/ui-bundle.zip
     snapshot: true

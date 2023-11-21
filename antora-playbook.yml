@@ -4,7 +4,7 @@ site:
   start_page: ROOT::pages/index.adoc
 content:
   sources:
-  - url: https://github.com/StampedeStudios/cow-defenders-docs-content.git
+  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-docs-content.git
     branches: main
 ui:
   bundle:

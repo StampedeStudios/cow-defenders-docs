@@ -24,10 +24,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Replace ANTORA_TOKEN
-        run: |
-          sed -i "s/ANTORA_TOKEN/${{ secrets.ANTORA_TOKEN }}/g" antora-playbook.yml
-      
       - name: Install Antora
         run: npm i antora
       

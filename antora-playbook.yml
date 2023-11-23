@@ -1,16 +1,17 @@
 site:
   title: Stampede Studios
-  url: https://stampedestudios.github.io
+  url: https://stampedestudios.github.io/cow-defenders/0.1.0/index.html
 content:
   sources:
   - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-docs-content.git
     branches: main
-    start_level: 0
-    end_level: 3
-    title: Cow Defenders
     version: 1.0.0
     tags:
-    - cow-defenders
+    - tower-defense
+    - top-down
+    - sci-fi
+    - pixel-art
+
 ui:
   bundle:
     url: https://github.com/StampedeStudios/stampede-documentation-ui/releases/download/1.0.0/ui-bundle.zip

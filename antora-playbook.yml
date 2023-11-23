@@ -1,6 +1,7 @@
 site:
   title: Stampede Studios
-  url: https://stampedestudios.github.io/cow-defenders/0.1.0/index.html
+  url: https://stampedestudios.github.io
+  start_page: ROOT:index
 content:
   sources:
   - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-docs-content.git

@@ -15,5 +15,5 @@ content:
 
 ui:
   bundle:
-    url: https://github.com/StampedeStudios/stampede-documentation-ui/releases/download/1.0.0/ui-bundle.zip
+    url: ./assets/ui-bundle.zip
     snapshot: true

@@ -4,7 +4,7 @@ site:
   start_page: cow-defenders:ROOT:index.adoc
 content:
   sources:
-  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-docs-content.git
+  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-documentation.git
     branches: main
     version: 0.1.0
     tags:

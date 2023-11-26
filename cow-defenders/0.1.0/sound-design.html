@@ -156,7 +156,38 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">Sound Design</h1>
-
+<div class="sect1">
+<h2 id="_sound_logic"><a class="anchor" href="#_sound_logic"></a>Sound Logic</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The in-scene SoundManger is a prefab that will hold a reference to a scriptable objects that specifies for each sound effect the name and a set of audio clips.</p>
+</div>
+<div class="paragraph">
+<p>Each gameobject that needs to play a sound effect will call the SoundManger to play the sound effect specifying the name of the sound, the priority of execution and the type. When an execution is demanded, the SoundManager will retrieve the sound effect from the resources by its name and will play it.</p>
+</div>
+<div class="paragraph">
+<p>If a named sound holds more than one audio clip, the SoundManager will randomly choose one of them and will add a variation to the pitch of the audio clip. This is done to avoid the repetition of the same sound effect.</p>
+</div>
+<div class="paragraph">
+<p><strong>SFXs</strong> are handled with two different pools that differ in the priority of execution. In any case, if any instantiated <em>AudioSource</em> is already playing a sound effect, the new sound effect will be skipped. This is intended to avoid the overlapping of too many sounds.</p>
+</div>
+<div class="paragraph">
+<p><strong>Music</strong> and <strong>Ambient</strong> sounds are handled in a different way. These sounds have a dedicated <em>AudioSource</em> for the sake of performance. This is because these sounds are played constantly and they are not supposed to be interrupted by other sounds. If this happens, the sound will be skipped but it&#8217;s important to avoid this situation.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>Sound Name</strong></div>
+<p>The name of the sound to be played is specified in a enum called <strong>SoundNames</strong>. This enum contains all the sound effects that are used in the game.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>Sound Priority</strong></div>
+<p>The priority is a boolean value that specifies if the sound is important and cannot be missed or if it is less relevant and can be skipped if the every sound channel is busy.</p>
+</div>
+<div class="paragraph">
+<div class="title"><strong>Sound Type</strong></div>
+<p>The type of the sound is specified in a enum called <strong>SoundType</strong>. Values of this enum are <strong>SFX</strong>, <strong>Music</strong> and <strong>SFX</strong>.</p>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>

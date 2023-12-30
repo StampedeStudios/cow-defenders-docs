@@ -110,6 +110,9 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="sound-design.html#Sound Logic">Sound logic</a>
   </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sound-design.html#Tools">Tools</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
@@ -162,7 +165,72 @@
   <div class="content">
 <article class="doc">
 <h1 class="page">User Interface</h1>
+<div class="sect1">
+<h2 id="_ui_logic"><a class="anchor" href="#_ui_logic"></a>UI Logic</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The UI is made with Unity UI-Toolkit where each component has a specific Document and uses one or more stylesheets. Each USS file is shared by different components so to have few style classes.</p>
+</div>
+<div class="sect2">
+<h3 id="_style_sheets"><a class="anchor" href="#_style_sheets"></a>Style sheets</h3>
+<div class="paragraph">
+<p>To keep stylesheets organized, [<a href="https://getbem.com/" class="bare">https://getbem.com/</a> BEM] is being used as suggested by Unity documentation.</p>
+</div>
+<div class="paragraph">
+<div class="title">BEM</div>
+<p>[BEM stands for Block Element Modifier and is a simple system that helps you write structured, non-ambiguous, easy to maintain selectors. With BEM, you assign classes to elements and then use these classes as the selectors in style sheets.</p>
+</div>
+<div class="paragraph">
+<p>BEM classes have up to three components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Block name: a block is a meaningful, standalone entity or control. For example, <code>menu</code>, <code>button</code>, <code>list-view</code></p>
+</li>
+<li>
+<p>Element name: a part of a block that has no standalone meaning and is semantically tied to its block. Element names are appended to the block name using two underscores. For example, <code>menu<em>item</code>, <code>button</em>icon</code>, or <code>list-view__item</code></p>
+</li>
+<li>
+<p>Modifier: a flag that changes the appearance or behavior of a block or element. Append a modifier to a block or element name with two dashes. For example, <code>menu&#8212;&#8203;disabled</code>, <code>menu<em>item&#8212;&#8203;disabled</code>, <code>button&#8212;&#8203;small</code>, or <code>list-view</em>item&#8212;&#8203;selected</code>., Unity, <a href="https://docs.unity3d.com/2020.1/Documentation/Manual/UIE-USS-WritingStyleSheets.html" class="bare">https://docs.unity3d.com/2020.1/Documentation/Manual/UIE-USS-WritingStyleSheets.html</a>]</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_palette"><a class="anchor" href="#_palette"></a>Palette</h2>
+<div class="sectionbody">
 
+</div>
+</div>
+<div class="sect1">
+<h2 id="_fonts"><a class="anchor" href="#_fonts"></a>Fonts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To mantain a consistent look and feel with a pixel art game, we use a pixel font. The font used is ["http://www.dafont.com/visitor.font" Visitor TT1 BRK] by AEnigma.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools"><a class="anchor" href="#_tools"></a>Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Following is a list of tools useful to create UI elements.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>[<a href="http://www.aseprite.org/" class="bare">http://www.aseprite.org/</a> Aseprite] - Pixel art editor and animator</p>
+</li>
+<li>
+<p>[<a href="http://www.gimp.org/" class="bare">http://www.gimp.org/</a> GIMP] - Image editor</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>

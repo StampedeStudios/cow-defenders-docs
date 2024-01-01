@@ -178,7 +178,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Sound effects in the game are handled by a single entity named <strong>SoundManger</strong>. The SoundManger is a singleton that is responsible for playing sound effects. All created sound effects are stored in specific folder and named with a specific convention: SFX_&lt;SoundName&gt;, Music_&lt;SoundName&gt; and Ambient_&lt;SoundName&gt;.</p>
+<p>Sound effects in the game are handled by a single entity named <code>SoundManger</code>. The SoundManger is a singleton that is responsible for playing sound effects. All created sound effects are stored in specific folder and named with a specific convention: SFX_&lt;SoundName&gt;, Music_&lt;SoundName&gt; and Ambient_&lt;SoundName&gt;.</p>
 </div>
 </div>
 </div>
@@ -200,17 +200,23 @@
 <div class="paragraph">
 <p><strong>Music</strong> and <strong>Ambient</strong> sounds are handled in a different way. These sounds have a dedicated <em>AudioSource</em> for the sake of performance. This is because these sounds are played constantly and they are not supposed to be interrupted by other sounds. If this happens, the sound will be skipped but it&#8217;s important to avoid this situation.</p>
 </div>
+<div class="sect2">
+<h3 id="_sound_name"><a class="anchor" href="#_sound_name"></a>Sound Name</h3>
 <div class="paragraph">
-<div class="title"><strong>Sound Name</strong></div>
-<p>The name of the sound to be played is specified in a enum called <strong>SoundNames</strong>. This enum contains all the sound effects that are used in the game.</p>
+<p>The name of the sound to be played is specified in a enum called <code>SoundNames</code>. This enum contains all the sound effects that are used in the game.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_sound_priority"><a class="anchor" href="#_sound_priority"></a>Sound Priority</h3>
 <div class="paragraph">
-<div class="title"><strong>Sound Priority</strong></div>
 <p>The priority is a boolean value that specifies if the sound is important and cannot be missed or if it is less relevant and can be skipped if the every sound channel is busy.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_sound_type"><a class="anchor" href="#_sound_type"></a>Sound Type</h3>
 <div class="paragraph">
-<div class="title"><strong>Sound Type</strong></div>
-<p>The type of the sound is specified in a enum called <strong>SoundType</strong>. Values of this enum are <strong>SFX</strong>, <strong>Music</strong> and <strong>SFX</strong>.</p>
+<p>The type of the sound is specified in a enum called <code>SoundType</code>. Values of this enum are <strong>SFX</strong>, <strong>Music</strong> and <strong>SFX</strong>.</p>
+</div>
 </div>
 </div>
 </div>
@@ -226,7 +232,7 @@
 <p><a href="https://www.audacityteam.org/">Audacity</a> is a free and open source audio editor. It is used to create and edit audio clips.</p>
 </li>
 <li>
-<p><a href="https://sfbgames.itch.io/chiptone">ChipTone</a> is a free tool for generating sound effects, primarily for games but they could be used for anything you like! I&#8217;m planning to use it to create sound effects for the game.</p>
+<p><a href="https://sfbgames.itch.io/chiptone">ChipTone</a> is a free tool for generating sound effects.</p>
 </li>
 </ul>
 </div>

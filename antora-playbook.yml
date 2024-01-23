@@ -14,7 +14,7 @@ content:
     - pixel-art
   - url: https://ANTORA_TOKEN@github.com/StampedeStudios/starknight-documentation.git
     branches: main
-    version: 0.1.0
+    version: 0.2.0
     tags:
     - shooter
     - top-down

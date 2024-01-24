@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>StarKnight 👾 :: Stampede Studios</title>
-    <link rel="canonical" href="https://stampedestudios.github.io/starknight/0.2.0/index.html">
+    <title>GamePlay🕹️ :: Stampede Studios</title>
+    <link rel="canonical" href="https://stampedestudios.github.io/starknight/0.3.0/gameplay.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -27,7 +27,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="starknight" data-version="0.2.0">
+<div class="nav-container" data-component="starknight" data-version="0.3.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -37,7 +37,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Game Design Document</a>
 <ul class="nav-list">
@@ -47,12 +47,15 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="level-design.html">Level design</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="gameplay.html">Gameplay</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="gameplay.html#enemies">Enemies</a>
+    <a class="nav-link" href="#hero">Hero</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="#enemies">Enemies</a>
   </li>
 </ul>
   </li>
@@ -96,7 +99,7 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">StarKnight</span>
-    <span class="version">0.2.0</span>
+    <span class="version">0.3.0</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -111,7 +114,7 @@
       <a class="title" href="index.html">StarKnight</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">0.2.0</a>
+          <a href="index.html">0.3.0</a>
         </li>
       </ul>
     </li>
@@ -128,41 +131,52 @@
   <ul>
     <li><a href="index.html">StarKnight</a></li>
     <li><a href="index.html">Game Design Document</a></li>
+    <li><a href="gameplay.html">Gameplay</a></li>
   </ul>
 </nav>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">StarKnight 👾</h1>
-<div class="sect1">
-<h2 id="_document_history"><a class="anchor" href="#_document_history"></a>Document History</h2>
+<h1 class="page">GamePlay🕹️</h1>
+<div id="preamble">
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 50.0001%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Date</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-21</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Initial version</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-23</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Updated all paragraphs</p></td>
-</tr>
-</tbody>
-</table>
+<div class="paragraph">
+<p>The game is inspired by <a href="https://it.wikipedia.org/wiki/Space_Invaders">Space Invaders</a> where the player has to eliminate all enemies without being destroyed. The player has a specific amount of health and drives a spaceship armed with a double plasma cannon.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/starknight.png" alt="Hero&#8217;s spaceship shooting enemis">
+</div>
+<div class="title">Figure 1. Hero&#8217;s spaceship shooting enemies</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_hero"><a class="anchor" href="#_hero"></a>Hero</h2>
+<div class="sectionbody">
+<div id="hero" class="paragraph">
+<p>Hero spaceship has two alternated plasma cannons, each clip has 45 bullets and requires 2 seconds to fully reload. The hero&#8217;s ship has more health and deals more damage than basic enemy ships.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/hero.gif" alt="Hero spaceship">
+</div>
+<div class="title">Figure 2. Hero spaceship</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_enemies"><a class="anchor" href="#_enemies"></a>Enemies</h2>
+<div class="sectionbody">
+<div id="enemies" class="paragraph">
+<p>There is only one type of enemy, each of them is low health and low damage but comes in big waves.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/enemy.png" alt="Enemy spaceship">
+</div>
+<div class="title">Figure 3. Enemy spaceship</div>
+</div>
 </div>
 </div>
 </article>

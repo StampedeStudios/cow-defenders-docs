@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Sound Design :: Stampede Studios</title>
-    <link rel="canonical" href="https://stampedestudios.github.io/starknight/0.2.0/sound-design.html">
+    <title>StarKnight 👾 :: Stampede Studios</title>
+    <link rel="canonical" href="https://stampedestudios.github.io/starknight/0.3.0/index.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -27,7 +27,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="starknight" data-version="0.2.0">
+<div class="nav-container" data-component="starknight" data-version="0.3.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -37,7 +37,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Game Design Document</a>
 <ul class="nav-list">
@@ -52,6 +52,9 @@
     <a class="nav-link" href="gameplay.html">Gameplay</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="gameplay.html#hero">Hero</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="gameplay.html#enemies">Enemies</a>
   </li>
 </ul>
@@ -59,12 +62,12 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="art-style.html">Art style</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="sound-design.html">Sound design</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="#Tools">Tools</a>
+    <a class="nav-link" href="sound-design.html#Tools">Tools</a>
   </li>
 </ul>
   </li>
@@ -96,7 +99,7 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">StarKnight</span>
-    <span class="version">0.2.0</span>
+    <span class="version">0.3.0</span>
   </div>
   <ul class="components">
     <li class="component">
@@ -111,7 +114,7 @@
       <a class="title" href="index.html">StarKnight</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">0.2.0</a>
+          <a href="index.html">0.3.0</a>
         </li>
       </ul>
     </li>
@@ -128,36 +131,53 @@
   <ul>
     <li><a href="index.html">StarKnight</a></li>
     <li><a href="index.html">Game Design Document</a></li>
-    <li><a href="sound-design.html">Sound design</a></li>
   </ul>
 </nav>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Sound Design</h1>
+<h1 class="page">StarKnight 👾</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>A few sound effects are present to help player to empathize with the hero. The game is lacking a main soundtrack.</p>
+<p>Game Design Document of StarKnight, a shooting game inspired by Space Invaders game with a <strong>Top-Down</strong> view, set in a <strong>SCI-FI</strong> world, with <a href="https://en.wikipedia.org/wiki/Pixel_art"><strong>Pixel-Art</strong></a> graphics.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_tools"><a class="anchor" href="#_tools"></a>Tools</h2>
+<h2 id="_document_history"><a class="anchor" href="#_document_history"></a>Document History</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Following is a list of tools that can be used to create sound effects for the game.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.audacityteam.org/">Audacity</a> is a free and open source audio editor. It is used to create and edit audio clips.</p>
-</li>
-<li>
-<p><a href="https://sfbgames.itch.io/chiptone">ChipTone</a> is a free tool for generating sound effects.</p>
-</li>
-</ul>
-</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 33.3333%;">
+<col style="width: 50.0001%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Version</th>
+<th class="tableblock halign-left valign-top">Date</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Initial version</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updated all paragraphs</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2024-01-24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Updated all paragraphs</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </article>

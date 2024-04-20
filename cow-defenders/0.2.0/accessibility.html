@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Cow-Defenders :: Stampede Studios</title>
-    <link rel="canonical" href="https://stampedestudios.github.io/cow-defenders/0.1.0/index.html">
+    <title>Accessibility :: Stampede Studios</title>
+    <link rel="canonical" href="https://stampedestudios.github.io/cow-defenders/0.2.0/accessibility.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
@@ -27,7 +27,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="cow-defenders" data-version="0.1.0">
+<div class="nav-container" data-component="cow-defenders" data-version="0.2.0">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -37,7 +37,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Game Design Document</a>
 <ul class="nav-list">
@@ -81,35 +81,38 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="gameplay.html">Gameplay</a>
-  </li>
-  <li class="nav-item" data-depth="2">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="gameplay.html#turrets">Turrets</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="gameplay.html#minigun">Minigun</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="gameplay.html#double-cannon">Double cannon</a>
   </li>
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="gameplay.html#fire-thrower">Fire thrower</a>
-<ul class="nav-list">
   <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="gameplay.html#economy">Economy</a>
+    <a class="nav-link" href="gameplay.html#fire-thrower">Fire thrower</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="gameplay.html#economy">Economy</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="gameplay.html#laboratory">Laboratory</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="gameplay.html#currency">Currency</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="gameplay.html#scrap">Scrap</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -140,7 +143,7 @@
   </li>
 </ul>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="accessibility.html">Accessibility</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -156,14 +159,14 @@
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
     <span class="title">Cow Defenders</span>
-    <span class="version">0.1.0</span>
+    <span class="version">0.2.0</span>
   </div>
   <ul class="components">
     <li class="component is-current">
       <a class="title" href="index.html">Cow Defenders</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">0.1.0</a>
+          <a href="index.html">0.2.0</a>
         </li>
       </ul>
     </li>
@@ -183,65 +186,19 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link is-current"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Cow Defenders</a></li>
     <li><a href="index.html">Game Design Document</a></li>
+    <li><a href="accessibility.html">Accessibility</a></li>
   </ul>
 </nav>
 </div>
   <div class="content">
 <article class="doc">
-<h1 class="page">Cow-Defenders</h1>
-<div id="preamble">
-<div class="sectionbody">
-<div class="paragraph">
-<p>Game Design Document of Cow-Defenders, a Tower Defense game with a <strong>Top-Down</strong> view, set in an <strong>SCI-FI</strong> world, with <a href="https://en.wikipedia.org/wiki/Pixel_art"><strong>Pixel-Art</strong></a> graphics.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_document_history"><a class="anchor" href="#_document_history"></a>Document History</h2>
-<div class="sectionbody">
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 16.6666%;">
-<col style="width: 33.3333%;">
-<col style="width: 50.0001%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Date</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023-11-23</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Initial version</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023-11-26</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Update Sound Designer paragraph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2023-12-31</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Update User Interface paragraph</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2024-02-04</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Update Gameplay section</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
+<h1 class="page">Accessibility</h1>
+
 </article>
   </div>
 </main>

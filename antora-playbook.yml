@@ -20,6 +20,12 @@ content:
     - top-down
     - sci-fi
     - pixel-art
+  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/sum-zero-documentation.git
+    branches: main
+    version: 0.8.0
+    tags:
+    - puzzle
+    - 2d
 
 ui:
   bundle:

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>User Interface :: Stampede Studios</title>
+    <link rel="canonical" href="https://stampedestudios.github.io/sum-zero/0.8.0/user-interface.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://stampedestudios.github.io">Stampede Studios</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="sum-zero" data-version="0.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all"></button>
+    <h3 class="title"><a href="index.html">Sum Zero</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Game Design Document</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="level-design.html">Level design</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="gameplay.html">Gameplay</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="art-style.html">Art style</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sound-design.html">Sound design</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="sound-design.html#Sound Logic">Sound logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="sound-design.html#Tools">Tools</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="user-interface.html">User interface</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#UI Logic">UI Logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#Tools">Tools</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="accessibility.html">Accessibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="monetization.html">Monetization</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Sum Zero</span>
+    <span class="version">0.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../cow-defenders/0.2.0/index.html">Cow Defenders</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../cow-defenders/0.2.0/index.html">0.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../starknight/0.3.0/index.html">StarKnight</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../starknight/0.3.0/index.html">0.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Sum Zero</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.8.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../cow-defenders/0.2.0/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Sum Zero</a></li>
+    <li><a href="index.html">Game Design Document</a></li>
+    <li><a href="sound-design.html#Tools">Tools</a></li>
+    <li><a href="user-interface.html">User interface</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">User Interface</h1>
+<div class="sect1">
+<h2 id="_ui_logic"><a class="anchor" href="#_ui_logic"></a>UI Logic</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The UI is made with Unity UI-Toolkit where each component has a specific Document and uses one or more stylesheets. Each USS file is shared by different components so to have few style classes.</p>
+</div>
+<div class="sect2">
+<h3 id="_style_sheets"><a class="anchor" href="#_style_sheets"></a>Style sheets</h3>
+<div class="paragraph">
+<p>To keep stylesheets organized, <a href="https://getbem.com/">BEM</a> is being used as suggested by Unity documentation.</p>
+</div>
+<div class="quoteblock">
+<div class="title">USS Writing style sheets</div>
+<blockquote>
+<div class="paragraph">
+<p>BEM stands for Block Element Modifier and is a simple system that helps you write structured, non-ambiguous, easy-to-maintain selectors. With BEM, you assign classes to elements and then use these classes as the selectors in style sheets.</p>
+</div>
+<div class="paragraph">
+<p>BEM classes have up to three components:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Block name: a block is a meaningful, standalone entity or control. For example, <code>menu</code>, <code>button</code>, <code>list-view</code></p>
+</li>
+<li>
+<p>Element name: a part of a block that has no standalone meaning and is semantically tied to its block. Element names are appended to the block name using two underscores. For example, <code>menu<em>item</code>, <code>button</em>icon</code>, or <code>list-view__item</code></p>
+</li>
+<li>
+<p>Modifier: a flag that changes the appearance or behavior of a block or element. Append a modifier to a block or element name with two dashes. For example, <code>menu&#8212;&#8203;disabled</code>, <code>menu<em>item&#8212;&#8203;disabled</code>, <code>button&#8212;&#8203;small</code>, or <code>list-view</em>item&#8212;&#8203;selected</code>.</p>
+</li>
+</ul>
+</div>
+</blockquote>
+<div class="attribution">
+&#8212; Unity<br>
+<cite>https://docs.unity3d.com/2020.1/Documentation/Manual/UIE-USS-WritingStyleSheets.html</cite>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_palette"><a class="anchor" href="#_palette"></a>Palette</h3>
+<div class="paragraph">
+<p>Currently, only a single palette is being used. This palette is used to help designers to be consistent but other colors can be used.</p>
+</div>
+<div class="imageblock unresolved">
+<div class="content">
+<img src="palette.png" alt="all colors used in the game as default palette">
+</div>
+<div class="title">Figure 1. Palette all colors used in the game as default palette</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_fonts"><a class="anchor" href="#_fonts"></a>Fonts</h3>
+<div class="paragraph">
+<p>To maintain a consistent look and feel with a pixel art game, we use a pixel font. The font used is <a href="http://www.dafont.com/visitor.font">Visitor TT1 BRK</a> by AEnigma.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools"><a class="anchor" href="#_tools"></a>Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Following is a list of tools useful to create UI elements.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.aseprite.org/">Aseprite</a> - Pixel art editor and animator</p>
+</li>
+<li>
+<p><a href="http://www.gimp.org/">GIMP</a> - Image Editor</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>© 2024 Stampede Studios.</p>
+  <p>Keep in touch with us and ask any question in our <a href="https://github.com/orgs/StampedeStudios/discussions/1">discussion</a></p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

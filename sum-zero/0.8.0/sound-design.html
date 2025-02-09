@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sound Design :: Stampede Studios</title>
+    <link rel="canonical" href="https://stampedestudios.github.io/sum-zero/0.8.0/sound-design.html">
+    <meta name="generator" content="Antora 3.1.4">
+    <link rel="stylesheet" href="../../_/css/site.css">
+<link rel="icon" href="../../_/img/favicon.ico" type="image/x-icon">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://stampedestudios.github.io">Stampede Studios</a>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="sum-zero" data-version="0.8.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all"></button>
+    <h3 class="title"><a href="index.html">Sum Zero</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Game Design Document</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="level-design.html">Level design</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="gameplay.html">Gameplay</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="art-style.html">Art style</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="sound-design.html">Sound design</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="#Sound Logic">Sound logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="#Tools">Tools</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="user-interface.html">User interface</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="user-interface.html#UI Logic">UI Logic</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="user-interface.html#Tools">Tools</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="accessibility.html">Accessibility</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="monetization.html">Monetization</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Sum Zero</span>
+    <span class="version">0.8.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../cow-defenders/0.2.0/index.html">Cow Defenders</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../cow-defenders/0.2.0/index.html">0.2.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../starknight/0.3.0/index.html">StarKnight</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../starknight/0.3.0/index.html">0.3.0</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Sum Zero</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">0.8.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../cow-defenders/0.2.0/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Sum Zero</a></li>
+    <li><a href="index.html">Game Design Document</a></li>
+    <li><a href="level-design.html">Level design</a></li>
+    <li><a href="sound-design.html">Sound design</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<article class="doc">
+<h1 class="page">Sound Design</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Sound effects in the game are handled by a single entity named <code>SoundManger</code>. The SoundManger is a singleton that is responsible for playing sound effects. All created sound effects are stored in a specific folder and named with a specific convention: SFX_&lt;SoundName&gt;, Music_&lt;SoundName&gt;, and Ambient_&lt;SoundName&gt;.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sound_logic"><a class="anchor" href="#_sound_logic"></a>Sound Logic</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The in-scene SoundManger is a prefab that will hold a reference to a scriptable object that specifies for each sound effect the name and a set of audio clips.</p>
+</div>
+<div class="paragraph">
+<p>Each game object that needs to play a sound effect will call the SoundManger to play the sound effect specifying the name of the sound, the priority of execution, and the type. When an execution is demanded, the SoundManager will retrieve the sound effect from the resources by its name and will play it.</p>
+</div>
+<div class="paragraph">
+<p>If a named sound holds more than one audio clip, the SoundManager will randomly choose one of them and will add a variation to the pitch of the audio clip. This is done to avoid the repetition of the same sound effect.</p>
+</div>
+<div class="paragraph">
+<p><strong>SFXs</strong> are handled with two different pools that differ in the priority of execution. In any case, if any instantiated <em>AudioSource</em> is already playing a sound effect, the new sound effect will be skipped. This is intended to avoid the overlapping of too many sounds.</p>
+</div>
+<div class="paragraph">
+<p><strong>Music</strong> and <strong>Ambient</strong> sounds are handled differently. These sounds have a dedicated <em>AudioSource</em> for the sake of performance. This is because these sounds are played constantly and they are not supposed to be interrupted by other sounds. If this happens, the sound will be skipped but it&#8217;s important to avoid this situation.</p>
+</div>
+<div class="sect2">
+<h3 id="_sound_name"><a class="anchor" href="#_sound_name"></a>Sound Name</h3>
+<div class="paragraph">
+<p>The name of the sound to be played is specified in an enum called <code>SoundNames</code>. This enum contains all the sound effects that are used in the game.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sound_priority"><a class="anchor" href="#_sound_priority"></a>Sound Priority</h3>
+<div class="paragraph">
+<p>The priority is a boolean value that specifies if the sound is important and cannot be missed or if it is less relevant and can be skipped if every sound channel is busy.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sound_type"><a class="anchor" href="#_sound_type"></a>Sound Type</h3>
+<div class="paragraph">
+<p>The type of sound is specified in an enum called <code>SoundType</code>. Values of this enum are <strong>SFX</strong>, <strong>Music</strong>, and <strong>SFX</strong>.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tools"><a class="anchor" href="#_tools"></a>Tools</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Following is a list of tools that can be used to create sound effects for the game.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.audacityteam.org/">Audacity</a> is a free and open-source audio editor. It is used to create and edit audio clips.</p>
+</li>
+<li>
+<p><a href="https://sfbgames.itch.io/chiptone">ChipTone</a> is a free tool for generating sound effects.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>© 2024 Stampede Studios.</p>
+  <p>Keep in touch with us and ask any question in our <a href="https://github.com/orgs/StampedeStudios/discussions/1">discussion</a></p>
+</footer>
+<script id="site-script" src="../../_/js/site.js" data-ui-root-path="../../_"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

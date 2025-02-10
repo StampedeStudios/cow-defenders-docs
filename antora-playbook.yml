@@ -4,14 +4,12 @@ site:
   start_page: cow-defenders:ROOT:index.adoc
 content:
   sources:
-  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-documentation.git
+  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/sum-zero-documentation.git
     branches: main
-    version: 0.1.0
+    version: 0.8.0
     tags:
-    - tower-defense
-    - top-down
-    - sci-fi
-    - pixel-art
+    - puzzle
+    - 2d
   - url: https://ANTORA_TOKEN@github.com/StampedeStudios/starknight-documentation.git
     branches: main
     version: 0.3.0
@@ -20,12 +18,14 @@ content:
     - top-down
     - sci-fi
     - pixel-art
-  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/sum-zero-documentation.git
+  - url: https://ANTORA_TOKEN@github.com/StampedeStudios/cow-defenders-documentation.git
     branches: main
-    version: 0.8.0
+    version: 0.1.0
     tags:
-    - puzzle
-    - 2d
+    - tower-defense
+    - top-down
+    - sci-fi
+    - pixel-art
 
 ui:
   bundle:
